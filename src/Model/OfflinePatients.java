@@ -16,6 +16,12 @@ public class OfflinePatients implements Patient {
         this.patientGender = patientGender;
         this.bedNumber = bedNumber;
     }
+
+    @Override
+    public String pId() {
+        return pId;
+    }
+
     public void getMyDetails(){
         System.out.println("Hey I am patient "+patientName);
         System.out.println("My patientId is "+pId);

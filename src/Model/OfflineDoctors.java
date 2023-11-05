@@ -1,11 +1,13 @@
-package Model.Interfaces;
+package Model;
 
-public class OfflineDoctors implements Doctor{
-    private String docId;
-    private String docName;
-    private String  docDegree;
-    private String docSpeciality;
-    private int docAge;
+import Model.Interfaces.Doctor;
+
+public class OfflineDoctors implements Doctor {
+    String docId;
+    String docName;
+    String  docDegree;
+    String docSpeciality;
+    int docAge;
 
     OfflineDoctors(String docId, String docName, String docDegree, String docSpeciality, int docAge){
         this.docId = docId;
@@ -14,6 +16,12 @@ public class OfflineDoctors implements Doctor{
         this.docSpeciality = docSpeciality;
         this.docAge = docAge;
     }
+
+    @Override
+    public String docId() {
+        return docId;
+    }
+
     public void Diagnosis(){
         System.out.println("Doing diagnosis offline");
     }
