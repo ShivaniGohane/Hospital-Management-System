@@ -13,6 +13,10 @@ public class DoctorDB {
         docDetails = new HashMap<>();
         docVsPatient = new HashMap<>();
     }
+    //HSP2
+    public Doctor getDoctorByID(String docID){
+        return docDetails.get(docID);
+    }
 
     public int getTotalDocs(){
         return docDetails.size();

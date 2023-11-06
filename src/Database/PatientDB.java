@@ -10,6 +10,10 @@ public class PatientDB {
         patientDetails = new HashMap<>();
     }
 
+    public int getTotalPatient(){
+        return patientDetails.size();
+    }
+
     public Patient getPatient(String pid){
         return patientDetails.get(pid);
     }
@@ -17,5 +21,8 @@ public class PatientDB {
         String pid = p.pId();
         patientDetails.put(pid, p);
         System.out.println("New Patient got added into db");
+    }
+    public Patient getPatientByID(String pId){
+        return patientDetails.get(pId);
     }
 }

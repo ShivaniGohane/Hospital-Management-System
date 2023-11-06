@@ -16,6 +16,9 @@ public class OfflineDoctors implements Doctor {
         this.docSpeciality = docSpeciality;
         this.docAge = docAge;
     }
+    public String getDoctorName(){
+        return docName;
+    }
 
     @Override
     public String docId() {
